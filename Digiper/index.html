@@ -1,0 +1,604 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8"/>
+
+
+<link href="css/normalize.css" rel="stylesheet"/>
+<link href="css/principal.css" rel="stylesheet"/>
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
+
+
+<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+<script src="js/jquery-2.1.1.min.js" ></script>
+<script src="js/jquery.stellar.min.js" ></script>
+
+<script>
+		$(function(){
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 40,
+				responsive: true,
+			});
+		});
+		
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				var altura = $(window).scrollTop();
+				
+				if(altura >0){
+					$("header").addClass("head-color");
+				}else{
+					$("header").removeClass("head-color");
+				}
+				console.log(altura);
+				
+				});
+				
+				$('a[href^="#"]').on('click', function(event) {
+				var target = $(this).attr("href");
+				//console.log("LINK "+this.href);
+				//console.log( $(this).attr("href"));
+				//console.log(target.length);
+				
+				    if( target.length ) {
+						event.preventDefault();
+						$('html, body').animate({
+							scrollTop: $(target).offset().top
+						}, 1000);
+					}
+					
+				});
+				
+				$(".cont-productos h3").click(function(){
+					$(this).parent().siblings().addClass("contrae");
+					$(this).parent().toggleClass("contrae");
+					var h3= $(this).parent().parent();
+					console.log(h3);
+					/*
+					    $('html, body').animate({
+							scrollTop: h3.offset().top
+						}, 600);
+					*/
+					console.log("click lista");
+				});
+
+		});
+		
+</script>
+	
+	
+</head>
+
+
+<body>
+<header>
+<div class="logo" > 
+<img src="img/digiper-logo.png" height="45px" />
+</div>
+<ul class="right">
+	<li><a href="#menu-inicial">Inicio</a></li>
+	<li><a href="#nosotros">Empresa</a></li>
+	<li><a href="#productos">Productos</a></li>
+	<li><a href="#equipo-usado">Equipo usado</a></li>
+	<li><a href="#contacto">Contactanos</a></li>
+</ul>
+</header>
+
+<section id="menu-inicial" class="imagen centra-texto" data-stellar-background-ratio="1.5" >
+<h1>Digiper</h1>
+<div class="pelota  s-mediana ">
+<a href="#nosotros">
+	<div class="cont-img esfera s-mediana" >
+		<img src="http://ppcdn.500px.org/65480005/f07c88babd133ea7aaa3d1f7ee8b80961f3255f2/2048.jpg"  height="100%"/>
+	</div>
+	<h2>Nosotros</h2>
+	</a>
+</div>
+<div class="pelota  s-mediana ">
+<a href="#productos">
+	<div class="cont-img esfera s-mediana" >
+	<img src="http://ppcdn.500px.org/66821265/730d6c253ac444e09a7794e6607c81eec92ba9b4/2048.jpg"  height="100%"/>
+	
+	<!-- http://ppcdn.500px.org/76767247/18634996576ea6a4e48a505160a967f4d3686a6c/2048.jpg
+
+	http://ppcdn.500px.org/29016021/4c9411c69424ba9502692dd6bbe56ad60412e23a/5.jpg
+	-->
+	
+	</div>
+	<h2>Productos</h2>
+</a>
+</div>
+<div class="pelota  s-mediana ">
+<a href="#equipo-usado">
+	<div class="cont-img esfera s-mediana" >
+	<img src="http://ppcdn.500px.org/56858374/74db35550ce435bd641ac82118d7953a8f925e61/5.jpg"  height="100%"/>
+	</div>
+	<h2>Equipo usado</h2>
+</a>
+</div>
+<div class="pelota  s-mediana ">
+<a href="#contacto">
+	<div class="cont-img esfera" >
+	<img src="http://ppcdn.500px.org/73410457/c538c3d923b65be772b5ca0114cc632a86579fc6/2048.jpg"  height="100%"/>
+	</div>
+	<h2>Contacto</h2>
+</a>
+</div>
+</section>
+
+<div class="divisor-a  "  >
+<a id="nosotros">x</a>
+	<div class="centra-texto limite-centrado">
+		<h2>Nosotros</h2>
+		<p>Somos una empresa localizada al norte de México en la ciudad de monterrey, con experiencia desde los años 80´s en el mercado de artes gráficas y contamos con presencia en todo el territorio Nacional.</p>
+	</div>
+	<div class="sub-importante centra-texto">
+		<p>Nos especializamos en la comercialización de equipo en diferentes líneas como son: Pre-Prensa, Impresión Offset, Flexografía, Empaque, Acabado.</p>
+	</div>
+		
+	</div>
+</div>
+
+<section id="primero"  class="imagen" data-stellar-background-ratio="0.5">
+	<div class="texto left" >
+		<h2>Especialista en equipo grafico</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum est id purus condimentum, in placerat felis tincidunt. Mauris quis ligula </p>
+	</div>
+</section>
+<section id="segundo"  class="imagen" data-stellar-background-ratio="0.2">
+<div class="patron-fondo">
+	<div class="texto right">
+		<h2>Servicio técnico permanente</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum est id purus condimentum, in placerat felis tincidunt. Mauris quis ligula </p>
+	</div>
+</div>
+</section>
+
+<section id="tercero"  class="imagen" data-stellar-background-ratio="0.5">
+	<div class="texto en-medio">
+		<h2>Variedad de equipos</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum est id purus condimentum, in placerat felis tincidunt. Mauris quis ligula </p>
+	</div>
+</section>
+
+<!--
+<div class="divisor"></div>
+<div class="divisor-m"></div>
+
+
+<div class="divisor-a">
+	<div class="centra-texto">
+		<h2>Variedad de equipos</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum est id purus condimentum, in placerat felis tincidunt. Mauris quis ligula </p>
+	</div>
+		<div class="texto en-medio">
+		<h2>Variedad de equipos</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum est id purus condimentum, in placerat felis tincidunt. Mauris quis ligula </p>
+	</div>
+</div>
+-->
+
+<div class="divisor-a" id="productos">
+	<div class="centra-texto limite-centrado">
+		<h2>Nuestros productos</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum est id purus condimentum, in placerat felis tincidunt. Mauris quis ligula </p>
+	</div>
+	<div class="cont-productos" >
+		<ul class="nivel-1">
+			<li class="contrae">
+			<h3>ACABADO</h3>
+				<ul class="nivel-2" >
+				<li class="contrae">
+				<h3>COSEDORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>BARNIZADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>DOBLADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>ESTAMPADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>GRAPADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>GUILLOTINA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>HOJEADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>HOTMELT</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>NUMERADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>PASTA DURA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>TREN DE ACABADO</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				</ul>
+			</li>
+			<li class="contrae">
+			<h3>IMPRESIÓN OFFSET</h3>
+				<ul class="nivel-2" >
+				<li class="contrae">
+				<h3>UN COLOR</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>DOS COLORES</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>CUATRO COLORES</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				</ul>
+			</li>
+			<li class="contrae">
+			<h3>EMPAQUE</h3>
+				<ul class="nivel-2" >
+				<li class="contrae">
+				<h3>EMPALMADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>PEGADORA LINEAL</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>TROQUELADORA MANUAL</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>TROQUELADORA AUTOMATICA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				</ul>
+			</li>
+			<li class="contrae">
+			<h3>CARTON</h3>
+				<ul class="nivel-2" >
+				<li class="contrae">
+				<h3>DOBLADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>EMPALMADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>GRAPADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>IMPRESORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>REFILADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>TROQUELADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				</ul>
+			</li>
+			<li class="contrae">
+			<h3>FLEXOGRAFIA</h3>
+				<ul class="nivel-2" >
+				<li class="contrae">
+				<h3>MODULAR</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>TORRE</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>TAMBOR CENTRAL</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				</ul>
+			</li>
+			<li class="contrae">
+			<h3>PLASTICO</h3>
+				<ul class="nivel-2" >
+				<li class="contrae">
+				<h3>BOLSEADORA DE BURBUJA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>BOLSEADORA DE CAMISETA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>BOLSEADORA SELLO DE FONDO</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>BOLSEADORA SELLO LATERAL</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>EXTRUDER</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>IMPRESORA BANDA ANCHA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				<li class="contrae">
+				<h3>TROQUELADORA</h3>
+					<ul class="nivel-3">
+						<li>
+						<h3>Titulo</h3>
+						<img src="http://ppcdn.500px.org/45629794/15a2ea426a9cfc08fefd17ad4919568b21d9670a/2048.jpg"  width="30%"/>
+						<p class="right" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+						</li>
+					</ul>
+				</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<section id="cuarto"  class="imagen" data-stellar-background-ratio="0.5">
+<a id="equipo-usado"></a>
+	<div class="texto en-medio">
+		<h2>Contamos con equipo usado</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum est id purus condimentum, in placerat felis tincidunt. Mauris quis ligula </p>
+	</div>
+</section>
+
+<div id="contacto"  class="divisor-a imagen" data-stellar-background-ratio="0.5">
+	<div class="centra-texto ">
+		<h2>Envianos un correo</h2>
+	</div>
+
+	<form>
+	<input type="text" name="nombre" placeholder="Nombre" class="left"/>
+	<input type="text" name="correo" placeholder="Correo" class="right"/><br>
+	<textarea width="100%" placeholder="Escribe tu mensaje..."></textarea>
+	<input type="submit" value="Enviar" />
+	</form>
+
+</div>
+
+<div class="divisor"></div>
+
+</body>
+</html>
